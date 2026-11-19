@@ -208,9 +208,6 @@ database-name keyword, apply pool sizes). No change to `TenantService` is requir
 Provider selection is wired centrally, but these remain the consuming service's responsibility
 (one provider per deployment):
 
-- **Migrations** are provider-specific — generate them against the provider the service deploys
-  with; supporting both simultaneously needs separate migration sets (e.g. `Migrations/SqlServer`,
-  `Migrations/Postgres`) selected by `Database:Provider` at design time and runtime.
 - **Concurrency tokens** — call `modelBuilder.ApplyFoundationConcurrencyTokens(Database)` (above) instead
   of hardcoding `IsRowVersion()`, so the `RowVersion`→`xmin` switch is handled for you.
 - **Provider-specific column types** (`datetime2`, `nvarchar`, computed/JSON columns) must be
