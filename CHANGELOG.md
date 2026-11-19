@@ -10,9 +10,12 @@ tags (MinVer).
   narrative as plain text) and problems, allergies, medications, immunizations, results, vital signs and
   procedures. Dependency-free, DTDs prohibited, input-capped, and parse errors carry only a reason and
   the XML line and position (documents are PHI).
-- **Scope narrowed.** This repository now contains nine packages: `Foundation.Caching`,
+- **New package `Foundation.Hl7`.** Parses an HL7 v2 message into segments, fields, repetitions,
+  components and subcomponents using the delimiters in its MSH segment. Dependency-free, input-capped,
+  and parse errors carry only a reason and segment index (messages are PHI).
+- **Scope narrowed.** This repository now contains ten packages: `Foundation.Caching`,
   `Foundation.Ccda`, `Foundation.Compliance`, `Foundation.DataAccess`, `Foundation.Dto`, `Foundation.Exceptions`,
-  `Foundation.Idempotency`, `Foundation.Persistence` and `Foundation.Tenancy`. The ASP.NET Core
+  `Foundation.Hl7`, `Foundation.Idempotency`, `Foundation.Persistence` and `Foundation.Tenancy`. The ASP.NET Core
   pipeline, time-zone, EventGrid, search-contract and gateway-contract packages were removed; each
   belongs with the single service or product that owns it.
 - **Breaking — `Foundation.Caching`:** `CacheScope(TenantId, CommunityId)` is now

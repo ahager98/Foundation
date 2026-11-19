@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Foundation.Hl7</PackageId>
+    <Description>Dependency-free HL7 v2 message parser: splits a message into segments, fields, repetitions, components and subcomponents using the delimiters declared in its own MSH segment. Bounded input, fail-closed, no message content in errors.</Description>
+    <RootNamespace>Foundation.Hl7</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="5.6.0" />
+    <PackageReference Update="Microsoft.VisualStudio.Threading.Analyzers" Version="18.12.1" />
+    <PackageReference Update="MinVer" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
