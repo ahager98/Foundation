@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Foundation.Persistence</PackageId>
+    <Description>EF Core persistence wiring for microservices across two orthogonal, config-driven axes: tenancy strategy (database-per-tenant or single shared database, with TenantDbContext applying a composed tenant query filter + TenantId stamping) and database provider (SqlServer or Postgres). AddFoundationPersistence&lt;TContext&gt; registers the tenant-scoped DbContext and the matching ITenantConnectionStringBuilder.</Description>
+    <RootNamespace>Foundation.Persistence</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.9" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
+    <ProjectReference Include="..\Foundation.DataAccess\Foundation.DataAccess.csproj" />
+    <ProjectReference Include="..\Foundation.Tenancy\Foundation.Tenancy.csproj" />
+    <ProjectReference Include="..\Foundation.Exceptions\Foundation.Exceptions.csproj" />
+    <ProjectReference Include="..\Foundation.Idempotency\Foundation.Idempotency.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="5.6.0" />
+    <PackageReference Update="Microsoft.VisualStudio.Threading.Analyzers" Version="18.12.1" />
+    <PackageReference Update="MinVer" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

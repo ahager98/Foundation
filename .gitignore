@@ -1,0 +1,14 @@
+bin/
+obj/
+*.user
+.vs/
+nupkgs/
+*.nupkg
+*.snupkg
+
+# Stop-gate build/test/coverage output (generated, do not track)
+TestResults/
+
+# Local Claude Code configuration, hooks and auto-memory (per-machine, do not track)
+.claude/
+memory/

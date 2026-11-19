@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Foundation.Caching/Foundation.Caching.csproj" />
+    <Project Path="src/Foundation.Compliance/Foundation.Compliance.csproj" />
+    <Project Path="src/Foundation.DataAccess/Foundation.DataAccess.csproj" />
+    <Project Path="src/Foundation.Dto/Foundation.Dto.csproj" />
+    <Project Path="src/Foundation.Exceptions/Foundation.Exceptions.csproj" />
+    <Project Path="src/Foundation.Idempotency/Foundation.Idempotency.csproj" />
+    <Project Path="src/Foundation.Persistence/Foundation.Persistence.csproj" />
+    <Project Path="src/Foundation.Tenancy/Foundation.Tenancy.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Foundation.Caching.Tests/Foundation.Caching.Tests.csproj" />
+    <Project Path="tests/Foundation.Compliance.Tests/Foundation.Compliance.Tests.csproj" />
+    <Project Path="tests/Foundation.DataAccess.Tests/Foundation.DataAccess.Tests.csproj" />
+    <Project Path="tests/Foundation.Dto.Tests/Foundation.Dto.Tests.csproj" />
+    <Project Path="tests/Foundation.Exceptions.Tests/Foundation.Exceptions.Tests.csproj" />
+    <Project Path="tests/Foundation.Idempotency.Tests/Foundation.Idempotency.Tests.csproj" />
+    <Project Path="tests/Foundation.Persistence.Tests/Foundation.Persistence.Tests.csproj" />
+    <Project Path="tests/Foundation.Tenancy.Tests/Foundation.Tenancy.Tests.csproj" />
+  </Folder>
+</Solution>

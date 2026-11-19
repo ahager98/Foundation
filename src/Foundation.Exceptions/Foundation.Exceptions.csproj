@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Foundation.Exceptions</PackageId>
+    <Description>Shared domain exception types (structured, client-safe fields via DomainException) for all microservices: ResourceNotFoundException, ResourceExistsException, ConcurrencyConflictException, ResourceInactiveException. Namespace is Foundation.Exceptions for drop-in compatibility.</Description>
+    <RootNamespace>Foundation.Exceptions</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="5.6.0" />
+    <PackageReference Update="Microsoft.VisualStudio.Threading.Analyzers" Version="18.12.1" />
+    <PackageReference Update="MinVer" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

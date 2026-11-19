@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Foundation.Tenancy</PackageId>
+    <Description>Per-tenant SQL connection-string resolution for microservices: ITenantService, TenantService (HTTP route + fallback), and IServiceCollection registration extension.</Description>
+    <RootNamespace>Foundation.Tenancy</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="5.6.0" />
+    <PackageReference Update="Microsoft.VisualStudio.Threading.Analyzers" Version="18.12.1" />
+    <PackageReference Update="MinVer" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

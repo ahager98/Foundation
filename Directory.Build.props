@@ -1,0 +1,52 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+
+    <!-- NuGet package metadata — overridden per-project via PackageId / Description -->
+    <Authors>ahager98</Authors>
+    <Company>ahager98</Company>
+    <RepositoryUrl>https://github.com/ahager98/Foundation</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <!-- Pack only in CI (via dotnet pack in the publish workflow) -->
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+
+    <!-- Symbol packages for debugging support -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <!-- Tag-driven versioning: a `vX.Y.Z` git tag sets the version for every package.
+         Untagged builds get a height-based pre-release version (e.g. 1.2.3-alpha.0.5). -->
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+  </PropertyGroup>
+
+  <!--
+    Solution-wide analyzers.
+    VSTHRD200: async methods must end in "Async".
+    RS0030: bans static Serilog.Log.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.13.61">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="3.3.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)BannedSymbols.txt"
+                     Condition="Exists('$(MSBuildThisFileDirectory)BannedSymbols.txt')" />
+    <!-- Derives the package version from the latest `v*` git tag. Requires fetch-depth: 0 in CI. -->
+    <PackageReference Include="MinVer" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

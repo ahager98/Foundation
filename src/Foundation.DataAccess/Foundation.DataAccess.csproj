@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Foundation.DataAccess</PackageId>
+    <Description>EF Core base types shared across DAL projects: BaseEntity (Id/IsActive/audit stamps/rowversion), IGenericCrud/GenericCrud, and ParentReference for navigation-property wiring.</Description>
+    <RootNamespace>Foundation.DataAccess</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="11.0.0" />
+    <ProjectReference Include="..\Foundation.Exceptions\Foundation.Exceptions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="5.6.0" />
+    <PackageReference Update="Microsoft.VisualStudio.Threading.Analyzers" Version="18.12.1" />
+    <PackageReference Update="MinVer" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

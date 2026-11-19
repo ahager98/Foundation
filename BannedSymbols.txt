@@ -1,0 +1,1 @@
+T:Serilog.Log;Use injected ILogger<T> instead of the static Serilog.Log facade (§11.5)

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Foundation.Compliance</PackageId>
+    <Description>HIPAA technical-safeguard guardrail for services: [Phi]/[Pii] classification attributes, a Business Associate Agreement inventory, and HipaaCheck, a static check (unclassified fields, endpoint authorization, classified data in logs, unlisted egress targets, insecure configuration, expired waivers) that produces a PHI-free evidence report. A technical guardrail, not a HIPAA certification.</Description>
+    <RootNamespace>Foundation.Compliance</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="..\Foundation.DataAccess\Foundation.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="5.6.0" />
+    <PackageReference Update="Microsoft.VisualStudio.Threading.Analyzers" Version="18.12.1" />
+    <PackageReference Update="MinVer" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

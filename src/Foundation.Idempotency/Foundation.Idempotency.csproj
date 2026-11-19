@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Foundation.Idempotency</PackageId>
+    <Description>Idempotent event-handler base for services: IdempotentEventHandler takes a durable cross-instance claim per event item before any side effect, isolates failures per item, and releases failed claims for redelivery; IIdempotencyClaimStore is the atomic claim seam (EF implementation in Foundation.Persistence, in-memory for tests).</Description>
+    <RootNamespace>Foundation.Idempotency</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="5.6.0" />
+    <PackageReference Update="Microsoft.VisualStudio.Threading.Analyzers" Version="18.12.1" />
+    <PackageReference Update="MinVer" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
