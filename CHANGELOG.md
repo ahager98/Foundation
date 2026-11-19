@@ -5,8 +5,13 @@ tags (MinVer).
 
 ## Unreleased
 
-- **Scope narrowed.** This repository now contains eight packages: `Foundation.Caching`,
-  `Foundation.Compliance`, `Foundation.DataAccess`, `Foundation.Dto`, `Foundation.Exceptions`,
+- **New package `Foundation.Ccda`.** Parses an HL7 C-CDA (R2.1) document from a string or stream:
+  header, patient, authors, custodian, sections (classified by template id, falling back to LOINC, with
+  narrative as plain text) and problems, allergies, medications, immunizations, results, vital signs and
+  procedures. Dependency-free, DTDs prohibited, input-capped, and parse errors carry only a reason and
+  the XML line and position (documents are PHI).
+- **Scope narrowed.** This repository now contains nine packages: `Foundation.Caching`,
+  `Foundation.Ccda`, `Foundation.Compliance`, `Foundation.DataAccess`, `Foundation.Dto`, `Foundation.Exceptions`,
   `Foundation.Idempotency`, `Foundation.Persistence` and `Foundation.Tenancy`. The ASP.NET Core
   pipeline, time-zone, EventGrid, search-contract and gateway-contract packages were removed; each
   belongs with the single service or product that owns it.

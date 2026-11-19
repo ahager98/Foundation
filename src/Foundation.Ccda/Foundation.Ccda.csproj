@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Foundation.Ccda</PackageId>
+    <Description>Dependency-free HL7 C-CDA (Consolidated CDA R2.1) document parser: reads the header, patient, authors and custodian, classifies sections by template id or LOINC code, renders section narrative as plain text, and extracts problems, allergies, medications, immunizations, results, vital signs and procedures. DTDs are prohibited, input is bounded, and errors never echo document content.</Description>
+    <RootNamespace>Foundation.Ccda</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="5.6.0" />
+    <PackageReference Update="Microsoft.VisualStudio.Threading.Analyzers" Version="18.12.1" />
+    <PackageReference Update="MinVer" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

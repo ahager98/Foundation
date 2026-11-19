@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/Foundation.Caching/Foundation.Caching.csproj" />
+    <Project Path="src/Foundation.Ccda/Foundation.Ccda.csproj" />
     <Project Path="src/Foundation.Compliance/Foundation.Compliance.csproj" />
     <Project Path="src/Foundation.DataAccess/Foundation.DataAccess.csproj" />
     <Project Path="src/Foundation.Dto/Foundation.Dto.csproj" />
@@ -11,6 +12,7 @@
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Foundation.Caching.Tests/Foundation.Caching.Tests.csproj" />
+    <Project Path="tests/Foundation.Ccda.Tests/Foundation.Ccda.Tests.csproj" />
     <Project Path="tests/Foundation.Compliance.Tests/Foundation.Compliance.Tests.csproj" />
     <Project Path="tests/Foundation.DataAccess.Tests/Foundation.DataAccess.Tests.csproj" />
     <Project Path="tests/Foundation.Dto.Tests/Foundation.Dto.Tests.csproj" />
